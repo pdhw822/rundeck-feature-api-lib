@@ -15,6 +15,7 @@ import com.rundeck.feature.api.event.ActionEventPublisher;
  */
 public interface FeatureActionContext {
     public static final String KEY_ACTION_DATA = "action-data";
+    public static final String KEY_FEATURE_CONFIG = "feature-config";
     String getActionId();
     void setActionId(String id);
     void put(String key, Object contextObject);
