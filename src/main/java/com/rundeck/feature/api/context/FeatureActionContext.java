@@ -1,4 +1,4 @@
-package com.rundeck.feature.api.action;
+package com.rundeck.feature.api.context;
 
 import com.rundeck.feature.api.event.ActionEventPublisher;
 

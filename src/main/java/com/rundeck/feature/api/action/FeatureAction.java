@@ -1,5 +1,7 @@
 package com.rundeck.feature.api.action;
 
+import com.rundeck.feature.api.context.FeatureActionContext;
+
 /**
  * A FeatureAction contains code that provides a discrete business value
  * to a user who executes the action.
@@ -15,6 +17,10 @@ package com.rundeck.feature.api.action;
  */
 public interface FeatureAction<T> {
     String getName();
+
+    String getDescription();
     void execute(FeatureActionContext context);
     Class<T> getFeatureActionDataClass();
+
+    T getSampleActionData();
 }

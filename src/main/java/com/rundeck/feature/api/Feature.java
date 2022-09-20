@@ -13,22 +13,14 @@ import java.util.Optional;
  * and contributes the output of the action back to the process automation installation via
  * action events.
  *
- * Features have a full lifecycle, and can be started and stopped as
- * appropriate. This lifecycle is intended to be separate from the enabled/disabled state of the feature
- * within the system. This means that just because a feature is installed and enabled, does not mean
- * it is always in the "running" state. A feature may be enabled, but not running if the user
- * decides that is appropriate.
- *
  * @param <C> The Config class type that will be used to configure the feature
  */
 public interface Feature<C> {
     String getName();
     boolean isEnabled();
-    boolean isRunning();
     void enable();
     void disable();
-    void start();
-    void stop();
+    void cleanup();
     Collection<FeatureAction<?>> getActions();
     Optional<FeatureAction<?>> getActionByName(String name);
     void configure(C configData);

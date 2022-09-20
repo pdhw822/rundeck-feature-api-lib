@@ -14,6 +14,5 @@ public interface FeatureRegistry {
     Collection<Feature<?>> listFeatures();
     Feature<?> getFeature(String feature);
     FeatureAction<?> getFeatureAction(String feature, String action);
-    void toggleFeature(String feature, boolean enable);
-    void toggleRunning(String feature, boolean running);
+    void toggleFeatureEnabled(String feature, boolean enable);
 }
