@@ -32,5 +32,6 @@ public interface Feature<C> {
     Collection<FeatureAction<?>> getActions();
     Optional<FeatureAction<?>> getActionByName(String name);
     void configure(C configData);
+    C getConfiguration();
     Class<C> getConfigClass();
 }
