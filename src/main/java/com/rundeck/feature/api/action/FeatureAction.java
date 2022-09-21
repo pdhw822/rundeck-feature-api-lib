@@ -1,6 +1,8 @@
 package com.rundeck.feature.api.action;
 
 import com.rundeck.feature.api.context.FeatureActionContext;
+import com.rundeck.feature.api.event.ActionCompleteEvent;
+import com.rundeck.feature.api.model.CompletionStatus;
 
 /**
  * A FeatureAction contains code that provides a discrete business value
@@ -19,7 +21,7 @@ public interface FeatureAction<T> {
     String getName();
 
     String getDescription();
-    void execute(FeatureActionContext context);
+    CompletionStatus execute(FeatureActionContext context);
     Class<T> getFeatureActionDataClass();
 
     T getSampleActionData();
