@@ -17,6 +17,7 @@ import java.util.Optional;
  */
 public interface Feature<C> {
     String getName();
+    String getDescription();
     boolean isEnabled();
     void enable();
     void disable();

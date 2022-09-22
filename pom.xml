@@ -6,7 +6,7 @@
 
     <groupId>com.rundeck</groupId>
     <artifactId>feature-api</artifactId>
-    <version>v0.6.0</version>
+    <version>v0.7.0</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
