@@ -23,10 +23,15 @@ public interface ActionEventPublisher {
      */
     public static final String COMPLETION_EVENT_CHANNEL = "action-completion";
     /**
-     * Reserved name for the action completion channel.
+     * Reserved name for the action start channel.
      * This channel should only be used for output type events.
      */
     public static final String START_EVENT_CHANNEL = "action-start";
+    /**
+     * Reserved name for the execute action feature channel.
+     * This channel should only be used for output type events.
+     */
+    public static final String EXECUTE_ACTION_EVENT_CHANNEL = "execute-feature-action";
     /**
      * General purpose publish method that can be used for events that should
      * cause behavior by subscribers. This method is not intended to be used for
@@ -55,4 +60,10 @@ public interface ActionEventPublisher {
      * @param eventData Completion status data
      */
     void publishCompletion(ActionCompleteEvent eventData);
+
+    /**
+     * Specialized channel for completion events
+     * @param eventData Execution data
+     */
+    void publishExecuteFeatureAction(ExecuteFeatureActionEvent eventData);
 }
