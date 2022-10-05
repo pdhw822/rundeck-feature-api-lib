@@ -16,6 +16,7 @@ import com.rundeck.feature.api.event.ActionEventPublisher;
 public interface FeatureActionContext {
     String getActionId();
     String getUser();
+    String getProducer();
     <T> T get(String key, Class<T> objectType);
     ActionEventPublisher getEventPublisher();
 }
