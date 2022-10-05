@@ -4,4 +4,5 @@ public interface ActionEvent {
     String getActionId();
     Long getTimestamp();
     String getUser();
+    String getProducer();
 }
